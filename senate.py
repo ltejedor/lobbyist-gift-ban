@@ -1,8 +1,10 @@
 def readFile(fileName, curYear, curPeriod):
   import xml.etree.ElementTree as ET
+  import urllib.request
   lobbyists = {}
   registrants = {}
-  xmlFile =  ET.parse(fileName)
+  xmlFile = ET.parse(urllib.request.urlopen(fileName))
+#  xmlFile = ET.parse(fileName)
   root = xmlFile.getroot()
   for child in root:
     typ = child.attrib['Type']
@@ -44,6 +46,7 @@ def search(lobs):
     endindex = lobStr.index(';', startindex)
     allLobFound[i] = lobStr[startindex:endindex]
     ind += 1
+#  print(allLobFound)
 
   if not lobFound:
     print('\tLobbyist not found.')
@@ -88,8 +91,9 @@ def main():
   curYear = '2014'
   regs = {}
   lobs = {}
-  for i in range(1, 13):
-    r, l = readFile('2014_2_4_'+str(i)+'.xml', curYear, curPeriod)
+  files = ['https://dl.dropboxusercontent.com/u/67470630/lobby/2014_2_4_1.xml', 'https://dl.dropboxusercontent.com/u/67470630/lobby/2014_2_4_2.xml']
+  for i in files:
+    r, l = readFile(i, curYear, curPeriod)
     regs.update(r)
     lobs.update(l)
   choice = input('Enter "L" to search lobbyists, "R" to search registrants: ').upper()
