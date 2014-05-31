@@ -17,9 +17,15 @@ $(document).ready(function(){
 	});
 
 	$('.submitBtn').click(function(){
-		$('.js-show-1').fadeOut();
-		$('.js-show-2').fadeIn();
-		$('.form_container').addClass('white_bg');
+		if($('input').val('Peter Parker')){
+			$('.js-show-1').fadeOut();
+			$('.js-show-2').fadeIn();
+			$('.form_container').addClass('white_bg');
+			$('input').val('');
+			$('#date').val(new Date().toDateInputValue());
+		}
+		else{
+		}
 	});
 
 	$('.js-show-page-2').click(function(){
