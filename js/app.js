@@ -17,7 +17,7 @@ $(document).ready(function(){
 	});
 
 	$('.submitBtn').click(function(){
-		if($('input').val('Peter Parker')){
+		if($('#name').val() == 'Ramses De La Rosa'){
 			$('.js-show-1').fadeOut();
 
 			var $url = "proxy.php?url=lobbyist.herokuapp.com?"
@@ -32,6 +32,7 @@ $(document).ready(function(){
 			$('#date').val(new Date().toDateInputValue());
 		}
 		else{
+
 		}
 	});
 
