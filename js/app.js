@@ -17,23 +17,50 @@ $(document).ready(function(){
 	});
 
 	$('.submitBtn').click(function(){
-		if($('#name').val() == 'Ramses De La Rosa'){
 			$('.js-show-1').fadeOut();
+			console.log('test')
 
-			var $url = "proxy.php?url=lobbyist.herokuapp.com?"
+			var url = "proxy.php?url=lobbyist.herokuapp.com?"
+console.log("tset");
+
+			if ($('#name').val() != "" && $('#company').val() != "" ) {
+				url += "last=" + $('#name').val() + "&company" + $('#company').val();
+			}
+			else if ($('#name').val() != "") {
+				url += "last=" + $('#name').val()
+			}
+			else if ($('#company').val() != "") {
+			url += "company=" + $('#company').val();
+			}
+
+			//alert(url);
 
 	    	$.get(url,function(data,status){
-		    	alert("Data: " + data + "\nStatus: " + status);
+		    	console.log("Data: " + data + "\nStatus: " + status);
+		    	
+				data = JSON.parse(data)
+				console.log(data.array);
+				console.log(data.array[0].OrganizationName);
+				$('.organizationName').text(data.array[0].OrganizationName);
+
+
+				$('.firstName').text(data.array[0].Lobbyist[0].FirstName);
+				$('.lastName').text(data.array[0].Lobbyist[0].LastName);
+				if (data.array[0].Lobbyist[0].FirstName == "") {
+					$('.firstName').text("N/A");
+				}
+				if (data.array[0].Lobbyist[0].LastName == "") {
+					$('.lastName').text("");
+				}
+
+				
 			});
+	
 
 			$('.js-show-2').fadeIn();
 			$('.form_container').addClass('white_bg');
 			$('input').val('');
 			$('#date').val(new Date().toDateInputValue());
-		}
-		else{
-
-		}
 	});
 
 	$('.js-show-page-2').click(function(){
