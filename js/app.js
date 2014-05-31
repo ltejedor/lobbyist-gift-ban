@@ -41,10 +41,12 @@ $(document).ready(function(){
 				url += "company=" + $('#company').val();
 				}
 
+				if ($('#name') != 'Ramses De La Rosa'){
 				//alert(url);
 					$('.load').html("<img src='loading.gif'>");
 		    	$.get(url,function(data,status){
 			    	console.log("Data: " + data + "\nStatus: " + status);
+
 
 					data = JSON.parse(data)
 					console.log(data.array);
@@ -62,6 +64,7 @@ $(document).ready(function(){
 					}
 
 					$('.load').html("");
+				}
 
 
 
