@@ -38,35 +38,34 @@ $(document).ready(function(){
 					url += "last=" + $('#name').val()
 				}
 				else if ($('#company').val() != "") {
-				url += "company=" + $('#company').val();
+					url += "company=" + $('#company').val();
 				}
 
-				if ($('#name').val() != 'Ramses De La Rosa'){
 				//alert(url);
-					$('.load').html("<img src='loading.gif'>");
-		    	$.get(url,function(data,status){
-			    	console.log("Data: " + data + "\nStatus: " + status);
+				$('.load').html("<img src='loading.gif'>");
+	    	$.get(url,function(data,status){
+		    	console.log("Data: " + data + "\nStatus: " + status);
 
 
-					data = JSON.parse(data)
-					console.log(data.array);
-					console.log(data.array[0].OrganizationName);
-					$('.organizationName').text(data.array[0].OrganizationName);
+				data = JSON.parse(data)
+				console.log(data.array);
+				console.log(data.array[0].OrganizationName);
+				$('.organizationName').text(data.array[0].OrganizationName);
 
 
-					$('.firstName').text(data.array[0].Lobbyist[0].FirstName);
-					$('.lastName').text(data.array[0].Lobbyist[0].LastName);
-					if (data.array[0].Lobbyist[0].FirstName == "") {
-						$('.firstName').text("N/A");
-					}
-					if (data.array[0].Lobbyist[0].LastName == "") {
-						$('.lastName').text("");
-					}
-
-					$('.load').html("");
+				$('.firstName').text(data.array[0].Lobbyist[0].FirstName);
+				$('.lastName').text(data.array[0].Lobbyist[0].LastName);
+				if (data.array[0].Lobbyist[0].FirstName == "") {
+					$('.firstName').text("N/A");
+				}
+				if (data.array[0].Lobbyist[0].LastName == "") {
+					$('.lastName').text("");
 				}
 
+				$('.load').html("");
 
+
+			}
 
 
 			});
