@@ -18,7 +18,11 @@ $(document).ready(function(){
 
 	$('.submitBtn').click(function(){
 		if($('name').val() == 'Ramses De La Rosa'){
-
+			$('.js-show-1').fadeOut();
+			$('.js-show-2').fadeIn();
+			$('.form_container').addClass('white_bg');
+			$('input').val('');
+			$('#date').val(new Date().toDateInputValue());
 		}
 		else{
 				$('.js-show-1').fadeOut();
@@ -59,22 +63,30 @@ $(document).ready(function(){
 
 					$('.load').html("");
 				}
+				$('.js-show-3').fadeIn();
 
 
 			});
 
 
-			$('.js-show-2').fadeIn();
 			$('.form_container').addClass('white_bg');
 			$('input').val('');
 			$('#date').val(new Date().toDateInputValue());
 	});
 
-	$('.js-show-page-2').click(function(){
+	$('.js-hide-page-2').click(function(){
 		$('.js-show-2').fadeOut();
 		$('.js-show-1').fadeIn();
 		$('.form_container').removeClass('white_bg');
 	});
+
+	$('.js-hide-page-3').click(function(){
+		$('.js-show-3').fadeOut();
+		$('.js-show-1').fadeIn();
+		$('.form_container').removeClass('white_bg');
+	});
+
+
 
 });
 
