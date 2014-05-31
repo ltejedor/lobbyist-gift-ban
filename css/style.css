@@ -1,5 +1,10 @@
-header{background-color: #E6EAEC; font-family: 'Lusitana', serif; padding: 13px;
-	font-size: 1.4em; color: #102441;}
+body{background-color: #E6EAEC;}
+
+h1, h2, a{color: #102441; font-family: 'Lusitana', serif;}
+header h1{font-size: 1.6em;}
+p{font-family: 'Open Sans', sans-serif;}
+a{text-decoration: none; font-weight: 700; font-size: 1.1em; color: #8D191B;}
+a:hover{color: #AA555D;}
 
 .row{width: 1100px; margin: 0 auto;}
 
@@ -42,3 +47,8 @@ label{ -webkit-transition: .333s ease margin-top, .333s ease opacity;
 	font-weight: 600;}
 .submitBtn button:hover{background-color: #E6EAEC; color: #102441;}
 .submitBtn{padding-bottom: 30px}
+
+
+@media (max-width: 1100px) {
+	.row{width: 93%; padding: 0 20px;}
+}
