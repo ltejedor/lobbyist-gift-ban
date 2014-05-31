@@ -1,0 +1,44 @@
+header{background-color: #E6EAEC; font-family: 'Lusitana', serif; padding: 13px;
+	font-size: 1.4em; color: #102441;}
+
+.row{width: 1100px; margin: 0 auto;}
+
+.form_container{background-color: #102441; padding: 15px; font-family: 'Open Sans', sans-serif;}
+.form_container p{color: #fff; text-align: center; font-weight: 300;}
+.form_container input{margin: 32px auto; display: block;
+		padding: 7px 10px;
+    border: solid 1px #b5b5b5;
+    outline: 0;
+    width: 250px;
+    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #F1F0F5), to(#FFFFFF));
+    background: -moz-linear-gradient(top, #FFFFFF, #F1F0F5 1px, #FFFFFF 25px);
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 400;
+}
+.form_container label{color: #fff; font-weight: 300; margin: 0 auto; font-size: .75em;
+		position: absolute; margin-top: -19px;}
+
+ul li{list-style-type:none;}
+ul{width: 275px; margin: 0 auto; padding: 0;}
+
+label{ -webkit-transition: .333s ease margin-top, .333s ease opacity;
+    transition: .333s ease margin-top, .333s ease opacity;}
+.submitBtn button{-webkit-transition: .5s ease; transition: .5s ease;}
+
+.js-hide-label{
+	opacity: 0;
+	margin-top: 0;
+}
+
+.submitBtn button{float: right;
+	background-color: #fff; border: 0px; border-radius: 3px;
+	color: #8D191B; font-size: 1.1em; padding: 4px 10px;
+	font-weight: 600;}
+.submitBtn button:hover{background-color: #E6EAEC; color: #102441;}
+.submitBtn{padding-bottom: 30px}
