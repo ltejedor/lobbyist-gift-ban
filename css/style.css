@@ -62,6 +62,7 @@ label{ -webkit-transition: .333s ease margin-top, .333s ease opacity;
 .submitBtn{padding-bottom: 30px}
 
 .successful{color: #2575ad!important; font-weight: 400!important; font-size: 1.2em; text-align: center!important;}
+.failure{color: #8D191B!important; font-weight: 400!important; font-size: 1.2em; text-align: center!important;}
 
 .white_bg{background-color: #fff!important;}
 .white_bg p{color: #231F20; width: 800px; margin: 25px auto; text-align: left;}

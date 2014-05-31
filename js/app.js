@@ -24,13 +24,23 @@ $(document).ready(function(){
 			$('input').val('');
 			$('#date').val(new Date().toDateInputValue());
 		}
-		else{
-
+		else if($('#name').val() == 'Diana Atalla'){
+			$('.js-show-1').fadeOut();
+			$('.js-show-3').fadeIn();
+			$('.form_container').addClass('white_bg');
+			$('input').val('');
+			$('#date').val(new Date().toDateInputValue());
 		}
 	});
 
-	$('.js-show-page-2').click(function(){
+	$('.js-hide-page-2').click(function(){
 		$('.js-show-2').fadeOut();
+		$('.js-show-1').fadeIn();
+		$('.form_container').removeClass('white_bg');
+	});
+
+	$('.js-hide-page-3').click(function(){
+		$('.js-show-3').fadeOut();
 		$('.js-show-1').fadeIn();
 		$('.form_container').removeClass('white_bg');
 	});
