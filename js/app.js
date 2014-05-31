@@ -17,45 +17,52 @@ $(document).ready(function(){
 	});
 
 	$('.submitBtn').click(function(){
-			$('.js-show-1').fadeOut();
-			console.log('test')
+		if($('name').val() == 'Ramses De La Rosa'){
 
-			var url = "proxy.php?url=lobbyist.herokuapp.com?"
-console.log("tset");
+		}
+		else{
+				$('.js-show-1').fadeOut();
+				console.log('test')
 
-			if ($('#name').val() != "" && $('#company').val() != "" ) {
-				url += "last=" + $('#name').val() + "&company" + $('#company').val();
-			}
-			else if ($('#name').val() != "") {
-				url += "last=" + $('#name').val()
-			}
-			else if ($('#company').val() != "") {
-			url += "company=" + $('#company').val();
-			}
+				var url = "proxy.php?url=lobbyist.herokuapp.com?"
+	console.log("tset");
 
-			//alert(url);
-$('.load').html("<img src='loading.gif'>");
-	    	$.get(url,function(data,status){
-		    	console.log("Data: " + data + "\nStatus: " + status);
-		    	
-				data = JSON.parse(data)
-				console.log(data.array);
-				console.log(data.array[0].OrganizationName);
-				$('.organizationName').text(data.array[0].OrganizationName);
-
-
-				$('.firstName').text(data.array[0].Lobbyist[0].FirstName);
-				$('.lastName').text(data.array[0].Lobbyist[0].LastName);
-				if (data.array[0].Lobbyist[0].FirstName == "") {
-					$('.firstName').text("N/A");
+				if ($('#name').val() != "" && $('#company').val() != "" ) {
+					url += "last=" + $('#name').val() + "&company" + $('#company').val();
 				}
-				if (data.array[0].Lobbyist[0].LastName == "") {
-					$('.lastName').text("");
+				else if ($('#name').val() != "") {
+					url += "last=" + $('#name').val()
 				}
-$('.load').html("");
-				
+				else if ($('#company').val() != "") {
+				url += "company=" + $('#company').val();
+				}
+
+				//alert(url);
+					$('.load').html("<img src='loading.gif'>");
+		    	$.get(url,function(data,status){
+			    	console.log("Data: " + data + "\nStatus: " + status);
+
+					data = JSON.parse(data)
+					console.log(data.array);
+					console.log(data.array[0].OrganizationName);
+					$('.organizationName').text(data.array[0].OrganizationName);
+
+
+					$('.firstName').text(data.array[0].Lobbyist[0].FirstName);
+					$('.lastName').text(data.array[0].Lobbyist[0].LastName);
+					if (data.array[0].Lobbyist[0].FirstName == "") {
+						$('.firstName').text("N/A");
+					}
+					if (data.array[0].Lobbyist[0].LastName == "") {
+						$('.lastName').text("");
+					}
+
+					$('.load').html("");
+				}
+
+
 			});
-	
+
 
 			$('.js-show-2').fadeIn();
 			$('.form_container').addClass('white_bg');
