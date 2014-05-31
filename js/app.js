@@ -65,10 +65,9 @@ $(document).ready(function(){
 				$('.load').html("");
 
 
-			}
 
 
-
+			});
 
 		  $('.js-show-3').fadeIn();
 			$('.form_container').addClass('white_bg');
