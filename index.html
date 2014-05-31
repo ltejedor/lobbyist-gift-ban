@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 
-		<title>Ethics App</title>
+		<title>Lobbyist Gift Ban Search</title>
 
 		<!-- Meta Tags -->
 		<meta charset="utf-8"/>
@@ -27,23 +27,33 @@
 		</header>
 
 		<div class="form_container">
-			<p>Can I Accept a Gift From this Company?</p>
-			<ul>
-				<li>
-					<label class="js-hide-label" for="company">Company Name</label>
-					<input type="text" placeholder="Company Name" id="company" name="company">
-				</li>
-				<li>
-					<label class="js-hide-label" for="name">Person's Name</label>
-					<input type="text" placeholder="Person's Name" id="name" name="name">
-				</li>
-				<li>
-					<label for="date">Date Received</label>
-					<input type="date" placeholder="Date Received" id=
-					"date" name="date">
-				</li>
-				<li class="submitBtn"><button>Check</button></li>
-			</ul>
+			<div class="js-show-1 js_page">
+				<p>Please Fill Out the Following Information About Your Gift</p>
+				<ul>
+					<li>
+						<label class="js-hide-label" for="company">Company Name</label>
+						<input type="text" placeholder="Company Name" id="company" name="company">
+					</li>
+					<li>
+						<label class="js-hide-label" for="name">Person's Name</label>
+						<input type="text" placeholder="Person's Name" id="name" name="name">
+					</li>
+					<li>
+						<label for="date">Date Received</label>
+						<input type="date" placeholder="Date Received" id=
+						"date" name="date">
+					</li>
+					<li class="submitBtn"><button>Can I Accept This Gift?</button></li>
+				</ul>
+			</div>
+			<div class="js_page js-show-2 is-hidden">
+				<p class="successful">Peter Parker is Not in Our Database</p>
+				<p>Peter Parker, employee of the Daily Bugle does not appear in our database of lobbyists. You may be able to accept this gift, but more research is always best.</p>
+				<div class="links">
+					<a class="thin" href="#">See more lobbyists who work at the Daily Bugle</a>
+					<a href="#" class="js-show-page-2">Submit another search</a>
+				</div>
+			</div>
 		</div>
 		<div class="row">
 			<h2>What is this about?</h2>

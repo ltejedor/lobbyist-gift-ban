@@ -1,14 +1,22 @@
-body{background-color: #E6EAEC;}
+body{background-color: #E6EAEC; padding-bottom: 35px;}
 
 h1, h2, a{color: #102441; font-family: 'Lusitana', serif;}
-header h1{font-size: 1.6em;}
+header h1{font-size: 1.6em; cursor: pointer; display: inline-block;}
 p{font-family: 'Open Sans', sans-serif;}
 a{text-decoration: none; font-weight: 700; font-size: 1.1em; color: #8D191B;}
 a:hover{color: #AA555D;}
 
-.row{width: 1100px; margin: 0 auto;}
+.row{width: 1100px; margin: 0 auto; padding: 0 20px;}
 
-.form_container{background-color: #102441; padding: 15px; font-family: 'Open Sans', sans-serif;}
+.is-hidden{display: none;}
+
+.form_container{background-color: #102441; padding: 15px; font-family: 'Open Sans', sans-serif;
+
+		-webkit-transition: background-color 700ms linear;
+		-moz-transition: background-color 700ms linear;
+		-o-transition: background-color 700ms linear;
+		-ms-transition: background-color 700ms linear;
+		transition: background-color 700ms linear;}
 .form_container p{color: #fff; text-align: center; font-weight: 300;}
 .form_container input{margin: 32px auto; display: block;
 		padding: 7px 10px;
@@ -25,6 +33,7 @@ a:hover{color: #AA555D;}
     border-radius: 5px;
     font-size: 15px;
     font-weight: 400;
+
 }
 .form_container label{color: #fff; font-weight: 300; margin: 0 auto; font-size: .75em;
 		position: absolute; margin-top: -19px;}
@@ -41,14 +50,30 @@ label{ -webkit-transition: .333s ease margin-top, .333s ease opacity;
 	margin-top: 0;
 }
 
-.submitBtn button{float: right;
-	background-color: #fff; border: 0px; border-radius: 3px;
-	color: #8D191B; font-size: 1.1em; padding: 4px 10px;
-	font-weight: 600;}
-.submitBtn button:hover{background-color: #E6EAEC; color: #102441;}
+.submitBtn button{
+	background-color: #2575ad; border: 0px; border-radius: 3px;
+	color: #DDE8ED; font-size: 1.1em; padding: 8px 0px;
+	font-weight: 600;
+	width: 100%;
+	}
+
+.submitBtn button:hover{opacity: .8;}
+.submitBtn button:focus{outline: 0;}
 .submitBtn{padding-bottom: 30px}
 
+.successful{color: #2575ad!important; font-weight: 400!important; font-size: 1.2em; text-align: center!important;}
+
+.white_bg{background-color: #fff!important;}
+.white_bg p{color: #231F20; width: 800px; margin: 25px auto; text-align: left;}
+
+.links{width: 800px; margin: 0 auto;}
+.links a{display: block; padding: 6px 0;}
+.links .thin{font-weight: 300;}
 
 @media (max-width: 1100px) {
-	.row{width: 93%; padding: 0 20px;}
+	.row{width: 93%;}
+}
+
+@media (max-width: 800px) {
+	.white_bg p{width: 93%;}
 }

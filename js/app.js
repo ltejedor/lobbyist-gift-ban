@@ -3,21 +3,30 @@ $(document).ready(function(){
 
 	$('.form_container li').find('input, textarea').on('keyup blur focus', function(e){
 
-	    // Cache our selectors
-	    var $this = $(this);
-	    var $label = $this.prev();
+    // Cache our selectors
+    var $this = $(this);
+    var $label = $this.prev();
 
-
-	    if (e.type == 'keyup') {
-	        if( $this.val() == '' ) {
-					  $label.addClass('js-hide-label');
-					} else {
-					  $label.removeClass('js-hide-label');
-					}
-	    }
-
+    if (e.type == 'keyup') {
+        if( $this.val() == '' ) {
+				  $label.addClass('js-hide-label');
+				} else {
+				  $label.removeClass('js-hide-label');
+				}
+    }
 	});
 
+	$('.submitBtn').click(function(){
+		$('.js-show-1').fadeOut();
+		$('.js-show-2').fadeIn();
+		$('.form_container').addClass('white_bg');
+	});
+
+	$('.js-show-page-2').click(function(){
+		$('.js-show-2').fadeOut();
+		$('.js-show-1').fadeIn();
+		$('.form_container').removeClass('white_bg');
+	});
 
 });
 
