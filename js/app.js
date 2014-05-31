@@ -19,6 +19,13 @@ $(document).ready(function(){
 	$('.submitBtn').click(function(){
 		if($('input').val('Peter Parker')){
 			$('.js-show-1').fadeOut();
+
+			var $url = "proxy.php?url=lobbyist.herokuapp.com?"
+
+	    	$.get(url,function(data,status){
+		    	alert("Data: " + data + "\nStatus: " + status);
+			});
+
 			$('.js-show-2').fadeIn();
 			$('.form_container').addClass('white_bg');
 			$('input').val('');
