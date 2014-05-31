@@ -62,7 +62,7 @@ $(document).ready(function(){
 					}
 
 					$('.load').html("");
-				}
+
 
 
 
@@ -72,6 +72,7 @@ $(document).ready(function(){
 			$('.form_container').addClass('white_bg');
 			$('input').val('');
 			$('#date').val(new Date().toDateInputValue());
+		}
 	});
 
 	$('.js-hide-page-2').click(function(){
