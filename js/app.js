@@ -17,6 +17,9 @@ $(document).ready(function(){
 	});
 
 	$('.submitBtn').click(function(){
+
+		if ($('#name').text == 'Rames L')
+
 			$('.js-show-1').fadeOut();
 			console.log('test')
 
@@ -38,6 +41,8 @@ $('.load').html("<img src='loading.gif'>");
 	    	$.get(url,function(data,status){
 		    	console.log("Data: " + data + "\nStatus: " + status);
 		    	
+		    	if (data != '{"array":]}') {
+
 				data = JSON.parse(data)
 				console.log(data.array);
 				console.log(data.array[0].OrganizationName);
@@ -53,7 +58,9 @@ $('.load').html("<img src='loading.gif'>");
 					$('.lastName').text("");
 				}
 $('.load').html("");
+				}
 				
+				$('.js-show-3').fadeIn();
 			});
 	
 

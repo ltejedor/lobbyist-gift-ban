@@ -56,6 +56,14 @@
 					<a href="#" class="js-show-page-2">Submit another search</a>
 				</div>
 			</div>
+			<div class="js_page js-show-3 is-hidden">
+				<center><span class="load"></span></center>
+				<p class="successful"><span class="firstName"></span> <span class="lastName"></span> is in Our Database</p>
+				<p><span class="firstName"></span> <span class="lastName"></span>, employee of <span class="organizationName"></span> does appear in our database of lobbyists. You may not be able to accept this gift, but more research is always best.</p>
+				<div class="links">
+					<a href="#" class="js-show-page-2">Submit another search</a>
+				</div>
+			</div>
 		</div>
 		<div class="row">
 			<h2>What is this about?</h2>
