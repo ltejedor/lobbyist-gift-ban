@@ -34,7 +34,7 @@ console.log("tset");
 			}
 
 			//alert(url);
-
+$('.load').html("<img src='loading.gif'>");
 	    	$.get(url,function(data,status){
 		    	console.log("Data: " + data + "\nStatus: " + status);
 		    	
@@ -52,7 +52,7 @@ console.log("tset");
 				if (data.array[0].Lobbyist[0].LastName == "") {
 					$('.lastName').text("");
 				}
-
+$('.load').html("");
 				
 			});
 	
