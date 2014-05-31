@@ -61,6 +61,8 @@ $('.load').html("");
 				}
 				
 				$('.js-show-3').fadeIn();
+				$('.js-show-2').fadeOut();
+				$('.form_container').addClass('white_bg');
 			});
 	
 
