@@ -17,7 +17,7 @@ $(document).ready(function(){
 	});
 
 	$('.submitBtn').click(function(){
-		if($('input').val('Peter Parker')){
+		if($('#name').val() == 'Ramses De La Rosa'){
 			$('.js-show-1').fadeOut();
 			$('.js-show-2').fadeIn();
 			$('.form_container').addClass('white_bg');
@@ -25,6 +25,7 @@ $(document).ready(function(){
 			$('#date').val(new Date().toDateInputValue());
 		}
 		else{
+
 		}
 	});
 
