@@ -25,7 +25,7 @@ $(document).ready(function(){
 				console.log('test')
 
 				var url = "proxy.php?url=lobbyist.herokuapp.com?"
-	console.log("tset");
+				console.log("tset");
 
 				if ($('#name').val() != "" && $('#company').val() != "" ) {
 					url += "last=" + $('#name').val() + "&company" + $('#company').val();
