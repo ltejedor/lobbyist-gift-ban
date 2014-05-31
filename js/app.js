@@ -41,7 +41,7 @@ $(document).ready(function(){
 				url += "company=" + $('#company').val();
 				}
 
-				if ($('#name').text() != 'Ramses De La Rosa'){
+				if ($('#name').val() != 'Ramses De La Rosa'){
 				//alert(url);
 					$('.load').html("<img src='loading.gif'>");
 		    	$.get(url,function(data,status){
