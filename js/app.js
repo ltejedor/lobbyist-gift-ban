@@ -34,21 +34,19 @@ $(document).ready(function(){
 					url += "company=" + $('#company').val();
 				}
 
-				var notFound = false;
-
 				//alert(url);
 				$('.load').html("<img src='loading.gif'>");
 	    	$.get(url,function(data,status){
-		    	console.log("Data: " + data + "\nStatus: " + status);
+		    	//console.log("Data: " + data + "\nStatus: " + status);
 		    	
 		    	if (data != '{"array":]}') {
-		    		console.log("empty array not returned");
+		    		//console.log("empty array not returned");
+
 					data = JSON.parse(data)
-					console.log(data.array);
-					console.log(data.array[0].OrganizationName);
+					//console.log(data.array);
+					//console.log(data.array[0].OrganizationName);
 					$('.organizationName').text(data.array[0].OrganizationName);
 
-console.log('point1');
 					$('.firstName').text(data.array[0].Lobbyist[0].FirstName);
 					$('.lastName').text(data.array[0].Lobbyist[0].LastName);
 					if (data.array[0].Lobbyist[0].FirstName == "") {
@@ -58,34 +56,22 @@ console.log('point1');
 						$('.lastName').text("");
 					}
 					$('.load').html("");
-console.log('point2');
+
 					$('.js-show-3').fadeIn();
 					$('.js-show-2').fadeOut();
 					$('.js-show-1').fadeOut();
 					$('.form_container').addClass('white_bg');
 				}
 				else {
+					$('.firstName').text('');
+					$('.lastName').text($('#names').text());
 					console.log("empty array returned");
 					$('.js-show-2').fadeOut();
 					$('.js-show-2').fadeIn();
 					$('.form_container').addClass('white_bg');
 				}
-				
-				
-
 				$('.load').html("");
-				$('.firstName').text('');
-				$('.lastName').text($('#names').text());
-				console.log("point3");
-
 			});
-/*
-		  $('.js-show-3').fadeIn();
-			$('.form_container').addClass('white_bg');
-			$('input').val('');
-			$('#date').val(new Date().toDateInputValue());
-			*/
-		console.log("point4");
 	});
 
 	
