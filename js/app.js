@@ -34,6 +34,8 @@ $(document).ready(function(){
 					url += "company=" + $('#company').val();
 				}
 
+				var notFound = false;
+
 				//alert(url);
 				$('.load').html("<img src='loading.gif'>");
 	    	$.get(url,function(data,status){
@@ -56,12 +58,19 @@ $(document).ready(function(){
 					$('.lastName').text("");
 				}
 				$('.load').html("");
-				}
-				
+
 				$('.js-show-3').fadeIn();
 				$('.js-show-2').fadeOut();
 				$('.js-show-1').fadeOut();
 				$('.form_container').addClass('white_bg');
+				}
+				else {
+					$('.js-show-2').fadeOut();
+					$('.js-show-2').fadeIn();
+					$('.form_container').addClass('white_bg');
+				}
+				
+				
 
 				$('.load').html("");
 
