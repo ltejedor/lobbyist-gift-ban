@@ -50,7 +50,7 @@
 			<div class="js_page js-show-2 is-hidden">
 				<center><span class="load"></span></center>
 				<p class="successful"><span class="firstName"></span> <span class="lastName"></span> is Not in Our Database</p>
-				<p>Ramses De La Rosa, employee of Ramapo College does not appear in our database of lobbyists. You may be able to accept this gift, but more research is always best.</p>
+				<p><span class="firstName"></span> <span class="lastName"></span>, employee of <span class="organizationName"></span> does not appear in our database of lobbyists. You may be able to accept this gift, but more research is always best.</p>
 				<div class="links">
 					<a class="thin" href="#">See more lobbyists who work at Ramapo College</a>
 					<a href="#" class="js-hide-page-2">Submit another search</a>
