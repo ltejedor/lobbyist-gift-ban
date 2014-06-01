@@ -48,7 +48,7 @@ $(document).ready(function(){
 					console.log(data.array[0].OrganizationName);
 					$('.organizationName').text(data.array[0].OrganizationName);
 
-
+console.log('point1');
 					$('.firstName').text(data.array[0].Lobbyist[0].FirstName);
 					$('.lastName').text(data.array[0].Lobbyist[0].LastName);
 					if (data.array[0].Lobbyist[0].FirstName == "") {
@@ -58,7 +58,7 @@ $(document).ready(function(){
 						$('.lastName').text("");
 					}
 					$('.load').html("");
-
+console.log('point2');
 					$('.js-show-3').fadeIn();
 					$('.js-show-2').fadeOut();
 					$('.js-show-1').fadeOut();
@@ -71,7 +71,7 @@ $(document).ready(function(){
 					$('.form_container').addClass('white_bg');
 				}
 				
-				
+				console.log("point3");
 
 				$('.load').html("");
 
