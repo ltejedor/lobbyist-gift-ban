@@ -71,12 +71,13 @@ console.log('point2');
 					$('.form_container').addClass('white_bg');
 				}
 				
-				console.log("point3");
+				
 
 				$('.load').html("");
 
 				$('.firstName').text('');
 				$('.lastName').text($('#names').text);
+				console.log("point3");
 
 			});
 /*
