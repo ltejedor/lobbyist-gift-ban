@@ -18,26 +18,24 @@ $(document).ready(function(){
 
 	$('.submitBtn').click(function(){
 
-		if ($('#name').text == 'Rames L')
+				$('.js-show-1').fadeOut();
+				console.log('test')
 
-			$('.js-show-1').fadeOut();
-			console.log('test')
+				var url = "proxy.php?url=lobbyist.herokuapp.com?"
+				console.log("tset");
 
-			var url = "proxy.php?url=lobbyist.herokuapp.com?"
-console.log("tset");
+				if ($('#name').val() != "" && $('#company').val() != "" ) {
+					url += "last=" + $('#name').val() + "&company" + $('#company').val();
+				}
+				else if ($('#name').val() != "") {
+					url += "last=" + $('#name').val()
+				}
+				else if ($('#company').val() != "") {
+					url += "company=" + $('#company').val();
+				}
 
-			if ($('#name').val() != "" && $('#company').val() != "" ) {
-				url += "last=" + $('#name').val() + "&company" + $('#company').val();
-			}
-			else if ($('#name').val() != "") {
-				url += "last=" + $('#name').val()
-			}
-			else if ($('#company').val() != "") {
-			url += "company=" + $('#company').val();
-			}
-
-			//alert(url);
-$('.load').html("<img src='loading.gif'>");
+				//alert(url);
+				$('.load').html("<img src='loading.gif'>");
 	    	$.get(url,function(data,status){
 		    	console.log("Data: " + data + "\nStatus: " + status);
 		    	
@@ -57,27 +55,41 @@ $('.load').html("<img src='loading.gif'>");
 				if (data.array[0].Lobbyist[0].LastName == "") {
 					$('.lastName').text("");
 				}
-$('.load').html("");
+				$('.load').html("");
 				}
 				
 				$('.js-show-3').fadeIn();
 				$('.js-show-2').fadeOut();
 				$('.js-show-1').fadeOut();
 				$('.form_container').addClass('white_bg');
-			});
-	
 
-			$('.js-show-2').fadeIn();
+				$('.load').html("");
+
+				$('.firstName').text('');
+				$('.lastName').text($('#names').text);
+
+			});
+
+		  $('.js-show-3').fadeIn();
 			$('.form_container').addClass('white_bg');
 			$('input').val('');
 			$('#date').val(new Date().toDateInputValue());
+		
 	});
 
-	$('.js-show-page-2').click(function(){
+	$('.js-hide-page-2').click(function(){
 		$('.js-show-2').fadeOut();
 		$('.js-show-1').fadeIn();
 		$('.form_container').removeClass('white_bg');
 	});
+
+	$('.js-hide-page-3').click(function(){
+		$('.js-show-3').fadeOut();
+		$('.js-show-1').fadeIn();
+		$('.form_container').removeClass('white_bg');
+	});
+
+
 
 });
 
