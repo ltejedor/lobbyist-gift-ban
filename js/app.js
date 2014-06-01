@@ -79,11 +79,12 @@ console.log('point2');
 				$('.lastName').text($('#names').text);
 
 			});
-
+/*
 		  $('.js-show-3').fadeIn();
 			$('.form_container').addClass('white_bg');
 			$('input').val('');
 			$('#date').val(new Date().toDateInputValue());
+			*/
 		console.log("point4");
 	});
 
