@@ -34,7 +34,7 @@ $(document).ready(function(){
 					url += "company=" + $('#company').val();
 				}
 
-				//alert(url);
+				console.log(url);
 				$('.load').html("<img src='loading.gif'>");
 	    	$.get(url,function(data,status){
 		    	console.log("Data: " + data + "\nStatus: " + status);
