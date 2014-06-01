@@ -84,10 +84,10 @@ console.log('point2');
 			$('.form_container').addClass('white_bg');
 			$('input').val('');
 			$('#date').val(new Date().toDateInputValue());
-		
+		console.log("point4");
 	});
 
-	console.log("point4");
+	
 
 	$('.js-hide-page-2').click(function(){
 		$('.js-show-2').fadeOut();
