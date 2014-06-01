@@ -37,7 +37,7 @@ $(document).ready(function(){
 				//alert(url);
 				$('.load').html("<img src='loading.gif'>");
 	    	$.get(url,function(data,status){
-		    	//console.log("Data: " + data + "\nStatus: " + status);
+		    	console.log("Data: " + data + "\nStatus: " + status);
 		    	
 		    	if (data != '{"array":]}') {
 		    		//console.log("empty array not returned");
