@@ -87,6 +87,8 @@ console.log('point2');
 		
 	});
 
+	console.log("point4");
+
 	$('.js-hide-page-2').click(function(){
 		$('.js-show-2').fadeOut();
 		$('.js-show-1').fadeIn();
