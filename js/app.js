@@ -74,9 +74,8 @@ console.log('point2');
 				
 
 				$('.load').html("");
-
 				$('.firstName').text('');
-				$('.lastName').text($('#names').text);
+				$('.lastName').text($('#names').text());
 				console.log("point3");
 
 			});
