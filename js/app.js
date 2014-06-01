@@ -42,29 +42,30 @@ $(document).ready(function(){
 		    	console.log("Data: " + data + "\nStatus: " + status);
 		    	
 		    	if (data != '{"array":]}') {
+		    		console.log("empty array not returned");
+					data = JSON.parse(data)
+					console.log(data.array);
+					console.log(data.array[0].OrganizationName);
+					$('.organizationName').text(data.array[0].OrganizationName);
 
-				data = JSON.parse(data)
-				console.log(data.array);
-				console.log(data.array[0].OrganizationName);
-				$('.organizationName').text(data.array[0].OrganizationName);
 
+					$('.firstName').text(data.array[0].Lobbyist[0].FirstName);
+					$('.lastName').text(data.array[0].Lobbyist[0].LastName);
+					if (data.array[0].Lobbyist[0].FirstName == "") {
+						$('.firstName').text("N/A");
+					}
+					if (data.array[0].Lobbyist[0].LastName == "") {
+						$('.lastName').text("");
+					}
+					$('.load').html("");
 
-				$('.firstName').text(data.array[0].Lobbyist[0].FirstName);
-				$('.lastName').text(data.array[0].Lobbyist[0].LastName);
-				if (data.array[0].Lobbyist[0].FirstName == "") {
-					$('.firstName').text("N/A");
-				}
-				if (data.array[0].Lobbyist[0].LastName == "") {
-					$('.lastName').text("");
-				}
-				$('.load').html("");
-
-				$('.js-show-3').fadeIn();
-				$('.js-show-2').fadeOut();
-				$('.js-show-1').fadeOut();
-				$('.form_container').addClass('white_bg');
+					$('.js-show-3').fadeIn();
+					$('.js-show-2').fadeOut();
+					$('.js-show-1').fadeOut();
+					$('.form_container').addClass('white_bg');
 				}
 				else {
+					console.log("empty array returned");
 					$('.js-show-2').fadeOut();
 					$('.js-show-2').fadeIn();
 					$('.form_container').addClass('white_bg');
