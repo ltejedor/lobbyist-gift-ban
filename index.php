@@ -56,16 +56,6 @@
 					<a href="#" class="js-hide-page-2">Submit another search</a>
 				</div>
 			</div>
-
-			<div class="js_page js-show-3 is-hidden">
-				<center><span class="load"></span></center>
-				<p class="failure">No, you may not accept this gift</p>
-				<p><span class="firstName"></span> <span class="lastName"></span>, employee of <span class="organizationName"></span> has been filed as a lobbyist from April 1, 2013 to August 31, 2014</p>
-				<div class="links">
-					<a class="thin" href="#">See more lobbyists who work at <span class="organizationName"></span></a>
-					<a href="#" class="js-hide-page-3">Submit another search</a>
-				</div>
-			</div>
 			<div class="js_page js-show-3 is-hidden">
 				<center><span class="load"></span></center>
 				<p class="successful"><span class="firstName"></span> <span class="lastName"></span> is in Our Database</p>
